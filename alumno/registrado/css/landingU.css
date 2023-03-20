@@ -1,0 +1,74 @@
+:root{
+    --primary: hsl(7, 61, 137, 0.8);
+    --secondary:hsl(21, 101, 216, 0.8);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color:aliceblue
+}
+
+.navbar-brand img{
+    width: 300px;
+}
+
+#btnRegistro{
+    background-color: rgba(141, 92, 246, 1);
+    color: aliceblue;
+    margin-left: 20px;
+}
+#btnRegistro:hover{
+    background-color: rgb(101, 66, 175);
+    color: aliceblue;
+    margin-left: 20px;
+}
+
+.banner{
+    height: 100vh;
+    width: 100%;
+    background:linear-gradient(95deg, rgba(3, 13, 126, 0.8), rgba(21, 101, 216, 0.8)), url('/imgs/cta.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.banner .nav li a{
+    color: aliceblue;
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+.banner .d-flex button{
+    color: aliceblue;
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+.banner .texto{
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.banner .texto .h5{
+    margin-bottom: 2%;
+}
+.banner .texto .h4{
+    margin-top: 2%;
+}
+
+#solicita{
+    margin-top: 1vh;
+    background-color: rgba(141, 92, 246, 1);
+}
+#solicita:hover{
+    background-color: rgb(101, 66, 175);
+}
+
+#conoce{
+    margin-top: 1vh;
+    color:aliceblue;
+    border-color: aliceblue;
+}
