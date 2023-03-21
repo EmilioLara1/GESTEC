@@ -28,7 +28,7 @@ body{
 .banner{
     height: 100vh;
     width: 100%;
-    background:linear-gradient(95deg, rgba(3, 13, 126, 0.8), rgba(21, 101, 216, 0.8)), url('/imgs/cta.jpg');
+    background:linear-gradient(95deg, rgba(2, 8, 85, 0.8), rgba(21, 101, 216, 0.8)), url('/imgs/cta.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -62,6 +62,7 @@ body{
 #solicita{
     margin-top: 1vh;
     background-color: rgba(141, 92, 246, 1);
+    margin-right: 2vh;
 }
 #solicita:hover{
     background-color: rgb(101, 66, 175);
@@ -71,4 +72,16 @@ body{
     margin-top: 1vh;
     color:aliceblue;
     border-color: aliceblue;
+}
+
+.nav{
+    font-size: 20px;
+}
+
+.d-flex{
+    margin-right: 3vh;
+}
+
+.navbar-brand{
+    margin-left: 3vh;
 }
