@@ -47,6 +47,17 @@ body{
     margin-top: 5px;
 }
 
+.banner .d-flex a{
+    color: aliceblue;
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+.inicioSes{
+    background-color: transparent;
+    border: none;
+}
+
 .banner .texto{
     margin-top: 10%;
     margin-left: 10%;
