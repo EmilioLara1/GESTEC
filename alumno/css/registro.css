@@ -7,7 +7,7 @@
 
 body{
     height: 100vh;
-    
+    background: linear-gradient(135deg, rgba(141, 92, 246, 1), rgba(21, 101, 216, 0.8));
 }
 
 .container{
@@ -19,6 +19,8 @@ body{
     position: absolute;
     left: 50%;
     top: 50%;
+    border-radius: 15px;
+    box-shadow: 20px 40px 25px rgba(0, 0, 0, 0.15);
 }
 
 h1{
@@ -37,7 +39,6 @@ form{
     width: 100%;
     position: relative;
     margin: 30px auto 0 auto;
-    box-shadow: #606060;
 }
 
 .campo{
