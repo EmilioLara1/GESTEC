@@ -16,32 +16,32 @@
         <form action="">
             <div class="row">
                 <h1>Datos Generales</h1>
-                <p> <strong>Llena todos los campos</strong> para continuar con el registro</p>
+                <p> <strong>Llena todos los campos</strong> para realizar el registro</p>
                 <div class="col-lg-6 col-md-6 col-sm-12 campo">
                     <label for="name" class="form-label">Nombre(s)*</label>
-                    <input type="text" class="form-control" id="name">
+                    <input type="text" class="form-control" id="name" required>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 campo">
                     <label for="dom" class="form-label">Domicilio(Calle y Número, ej. Juarez 513)*</label>
-                    <input type="text" class="form-control" id="dom">
+                    <input type="text" class="form-control" id="dom" required>
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-12 campo">
                     <label for="paterno" class="form-label">Apellido Paterno*</label>
-                    <input type="text" class="form-control" id="paterno">
+                    <input type="text" class="form-control" id="paterno" required>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 campo">
                     <label for="colonia" class="form-label">Colonia*</label>
-                    <input type="text" class="form-control" id="colonia">
+                    <input type="text" class="form-control" id="colonia" required>
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-12 campo">
                     <label for="materno" class="form-label">Apellido Materno*</label>
-                    <input type="text" class="form-control" id="materno">
+                    <input type="text" class="form-control" id="materno" required>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 campo">
                     <label for="cel" class="form-label">Teléfono Celular*</label>
-                    <input type="tel" class="form-control" id="cel">
+                    <input type="tel" class="form-control" id="cel" required>
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-12 campo">
@@ -65,14 +65,23 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 campo">
                     <label for="cod" class="form-label">Código de Alumno*</label>
-                    <input type="number" class="form-control" id="cod">
+                    <input type="number" class="form-control" id="cod" required>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 campo">
+                    <label for="correo" class="form-label">Correo institucional*</label>
+                    <input type="email" class="form-control" id="correo" required>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 campo">
+                    <label for="pass" class="form-label">Nueva Contraseña*</label>
+                    <input type="password" class="form-control" id="pass" required>
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center campo button">
                     <a href="/alumno/index-usuario.html" class="btn btn-danger" role="button">Cancelar</a>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center campo button">
-                    <a href="#" class="btn btn-primary" role="button">Siguiente</a>
+                    <input type="submit" class="btn btn-primary" value="Enviar">
                 </div>
             </div>
         </form>

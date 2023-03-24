@@ -12,7 +12,7 @@ body{
 
 .container{
     background-color: #fff;
-    width: 100%;
+    width: 70%;
     min-width: 420px;
     padding: 35px 50px;
     transform: translate(-50%, -50%);
