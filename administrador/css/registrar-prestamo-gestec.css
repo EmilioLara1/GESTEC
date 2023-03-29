@@ -21,22 +21,12 @@ body{
     box-shadow: 20px 40px 25px rgba(0, 0, 0, 0.15);
 }
 
-.campo{
-    width: 426px;
-    justify-content: left;
-}
-
-.form-control, .form-select{
-    border-color: black;
+.form-select{
+    width: 232px;
 }
 
 .content{
     justify-content: center;
-    height: 410px;
-}
-
-label{
-    font-weight: 600;
 }
 
 h1{

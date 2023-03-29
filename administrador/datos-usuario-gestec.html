@@ -13,94 +13,103 @@
     <!-- Iconos Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="/administrador/css/datos-usuario-gestec.css">
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="col">
-            <form action="">
-                <div class="row">
-                    <h1 class="text-center">Datos del usuario</h1>
-
-                    <p class="lead text-center"><strong>Revisa que todos los datos sean correctos</strong> para continuar con el préstamo</p>
-                </div>
-
-                <div class="row">
-                    <hr>
-                </div>
-
-                <div class="row">
+            <div class="row">
+                <form action="">
+                    <div class="row">
+                        <h1 class="text-center">Datos del usuario</h1>
+    
+                        <p class="lead text-center"><strong>Revisa que todos los datos sean correctos</strong> para continuar con el préstamo</p>
+                    </div>
+    
+                    <div class="row">
+                        <hr>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-auto">
+                            <div class="row">
+                                <div class="col content">
+                                    <div class="row campo">
+                                        <label class="form-label">Nombre(s)</label>
+                                        <p>Mostrar nombre</p>
+                                    </div>
+            
+                                    <div class="row campo">
+                                        <label class="form-label">Apellido Paterno</label>
+                                        <p>Mostrar apellido paterno</p>
+                                    </div>
                     
-                    <div class="col-auto content">
-                        <div class="col campo">
-                            <label class="form-label">Nombre(s)</label>
-                            <p>Mostrar nombre</p>
-                        </div>
+                                    <div class="row campo">
+                                        <label class="form-label">Apellido Materno</label>
+                                        <p>Mostrar apellido materno</p>
+                                    </div>
+            
+                                    <div class="row campo">
+                                        <label class="form-label">Carrera</label>
+                                        <p>Mostrar carrera</p>
+                                    </div>
+                    
+                                    <div class="row campo">
+                                        <label class="form-label">Domicilio (Calle y Número, ej. Juarez 513)</label>
+                                        <p>Mostrar domicilio</p>
+                                    </div>
+                                </div>
+            
+                                <div class="col content">
+                                    <div class="row campo">
+                                        <label class="form-label">Colonia</label>
+                                        <p>Mostrar colonia</p>
+                                    </div>
+                    
+                                    <div class="row campo">
+                                        <label class="form-label">Celular</label>
+                                        <p>Mostrar celular</p>
+                                    </div>
+            
+                                    <div class="row campo">
+                                        <label class="form-label">Código</label>
+                                        <p>Mostrar codigo</p>
+                                    </div>
+                    
+                                    <div class="row campo">
+                                        <label class="form-label">Correo electrónico institucional</label>
+                                        <p>Mostrar correo</p>
+                                    </div>
+            
+                                    <div class="row campo">
+                                        <div class="col">
+                                            <div class="row">
+                                                <label class="form-label">Documentos</label>
+                                            </div>
 
-                        <div class="col campo">
-                            <label class="form-label">Apellido Paterno</label>
-                            <p>Mostrar apellido paterno</p>
-                        </div>
-        
-                        <div class="col campo">
-                            <label class="form-label">Apellido Materno</label>
-                            <p>Mostrar apellido materno</p>
-                        </div>
-
-                        <div class="col campo">
-                            <label class="form-label">Carrera</label>
-                            <p>Mostrar carrera</p>
-                        </div>
-        
-                        <div class="col campo">
-                            <label class="form-label">Domicilio (Calle y Número, ej. Juarez 513)</label>
-                            <p>Mostrar domicilio</p>
+                                            <button type="button" class="btn btn-primary btn-sm">Abrir PDF</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="col-auto content">
-                        <div class="col campo">
-                            <label class="form-label">Colonia</label>
-                            <p>Mostrar colonia</p>
-                        </div>
-        
-                        <div class="col campo">
-                            <label class="form-label">Celular</label>
-                            <p>Mostrar celular</p>
-                        </div>
-
-                        <div class="col campo">
-                            <label class="form-label">Código</label>
-                            <p>Mostrar codigo</p>
-                        </div>
-        
-                        <div class="col campo">
-                            <label class="form-label">Correo electrónico institucional</label>
-                            <p>Mostrar correo</p>
-                        </div>
-
-                        <div class="col campo">
-                            <label class="form-label">Documentos</label>
-                            <br>
-                            <button type="button" class="btn btn-primary btn-sm">Abrir PDF</button>
-                        </div>
+    
+                    <div class="row">
+                        <nav>
+                            <ul class="pagination m-4">
+                              <li class="page-item "><a class="page-link" href="#">Regresar</a></li>
+                              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                            </ul>
+                        </nav>
+                        <a class="cancel text-center" href="/administrador/menu-gestec.html">Cancelar</a>
                     </div>
-
-                </div>
-
-                <div class="row">
-                    <nav>
-                        <ul class="pagination m-4">
-                          <li class="page-item "><a class="page-link" href="#">Regresar</a></li>
-                          <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item"><a class="page-link" href="#">2</a></li>
-                          <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
-                        </ul>
-                    </nav>
-                    <a class="cancel text-center" href="/administrador/menu-gestec.html">Cancelar</a>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 

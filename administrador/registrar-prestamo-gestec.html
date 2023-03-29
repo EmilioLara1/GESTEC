@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar préstamo</title>
+    <link rel="shortcut icon" href="/imgs/icono.png">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    <!-- Iconos Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/administrador/css/registrar-prestamo-gestec.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="col">
+            <div class="row">
+                <form action="">
+                    <div class="row">
+                        <h1 class="text-center">Registrar préstamo</h1>
+    
+                        <p class="lead text-center">Ingresa los datos correspondientes para <strong>finalizar el préstamo</strong></p>
+                    </div>
+    
+                    <div class="row">
+                        <hr>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-auto">
+                            <div class="row m-4 content">
+                                <div class="col-auto">
+                                    <label class="p-0 m-2"><strong>Selecciona el tipo de equipo*</strong></label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">Laptop y cargador</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">Tablet y cargador</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">Cable VGA</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">Cable Ethernet</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row m-4 content">
+                                <div class="col-auto">
+                                    <label class="p-0 m-2"><strong>ID del equipo*</strong></label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Selecciona una opción</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <nav>
+                            <ul class="pagination m-4">
+                              <li class="page-item "><a class="page-link" href="#">Regresar</a></li>
+                              <li class="page-item"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">Finalizar</a></li>
+                            </ul>
+                        </nav>
+                        <a class="cancel text-center" href="/administrador/menu-gestec.html">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
