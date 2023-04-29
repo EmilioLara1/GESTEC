@@ -16,5 +16,4 @@ function connectDB(){
     return $conn;
 }
 
-echo "Conexión exitosa";
 ?>

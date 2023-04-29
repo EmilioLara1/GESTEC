@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="shortcut icon" href="/imgs/icono.png">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    <!-- Iconos Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/alumno/css/registro.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="col">
+            <div class="row">
+                <form action="">
+                    <div class="row">
+                        <h1 class="text-center">Datos generales</h1>
+    
+                        <p class="lead text-center"><strong>Llena todos los campos</strong> para realizar el registro</p>
+                    </div>
+    
+                    <div class="row">
+                        <hr>
+                    </div>
+    
+                    <div class="row mt-3">
+                        <div class="col-auto">
+                            <div class="row">
+                                <div class="col content">
+                                    <label for="nombre" class="form-label">Nombre(s)*</label>
+                                    <input type="text" class="form-control" name="nombre" id="nombre" maxlength="25" required>
+                                    
+                                    <label for="paterno" class="form-label mt-3">Apellido paterno*</label>
+                                    <input type="text" class="form-control" name="paterno" id="paterno" maxlength="25" required>
+
+                                    <label for="materno" class="form-label mt-3">Apellido materno*</label>
+                                    <input type="text" class="form-control" name="materno" id="materno" maxlength="25" required>
+
+                                    <label for="carrera" class="form-label mt-3">Carrera*</label>
+                                    <select class="form-select" name="carrera" id="carrera">
+                                        <option selected>Selecciona una opción</option>
+                                        <option value="Administracion">Administración</option>
+                                        <option value="Administracion Financiera y Sistemas">Administración Financiera y Sistemas</option>
+                                        <option value="Gubernamental">Administración Gubernamental y Políticas Públicas</option>
+                                        <option value="Contaduria">Contaduría Pública</option>
+                                        <option value="Economia">Economía</option>
+                                        <option value="Gastro"> Gestión de Negocios Gastronómicos</option>
+                                        <option value="Ambiental">Gestión y Economía Ambiental</option>
+                                        <option value="INGNegocios">Ingeniería en Negocios</option>
+                                        <option value="Mercadotecnia">Mercadotecnia</option>
+                                        <option value="NegociosInternacionales">Negocios Internacionales</option>
+                                        <option value="RH">Recursos Humanos</option>
+                                        <option value="RP">Relaciones Públicas y Comunicación</option>
+                                        <option value="Tecnologias">Tecnologías de la Información</option>
+                                        <option value="Turismo">Turismo</option>
+                                    </select>
+                                </div>
+            
+                                <div class="col content">
+                                    <label for="dom" class="form-label">Domicilio (Calle y número, ej. Juarez 513)*</label>
+                                    <input type="text" class="form-control" name="dom" id="dom" maxlength="45" required>
+                                    
+                                    <label for="colonia" class="form-label mt-3">Colonia*</label>
+                                    <input type="text" class="form-control" name="colonia" id="colonia" maxlength="40" required>
+                    
+                                    <label for="cel" class="form-label mt-3">Celular*</label>
+                                    <input type="tel" class="form-control" name="cel" id="cel" maxlength="10" required>
+            
+                                    <label for="cod" class="form-label mt-3">Código*</label>
+                                    <input type="number" class="form-control" name="cod" id="cod" maxlength="9" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="row mt-3">
+                        <nav>
+                            <ul class="pagination m-4">
+                              <li class="page-item"><a class="page-link" href="/administrador/html/buscar-folio.html">Regresar</a></li>
+                              <li class="page-item active"><a class="page-link" href="/administrador/html/datos-usuario-gestec.html">1</a></li>
+                              <li class="page-item"><a class="page-link" href="/administrador/html/registrar-prestamo-gestec.html">2</a></li>
+                              <li class="page-item"><a class="page-link" href="/administrador/html/registrar-prestamo-gestec.html">Siguiente</a></li>
+                            </ul>
+                        </nav>
+                        <a class="cancel text-center" href="/administrador/html/menu-gestec.html">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
