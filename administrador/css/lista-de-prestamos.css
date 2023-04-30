@@ -1,0 +1,108 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    height: 100vh;
+}
+
+.container-fluid{
+    padding: 30px;
+    background-color: #fff;
+    width: 95%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.form-select{
+    width: 232px;
+}
+
+.content{
+    justify-content: center;
+}
+
+h1{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.cancel{
+    color: blueviolet;
+}
+
+.row hr{
+    width: 550px;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #88909D));
+    border: none;
+    height: 1px;
+}
+
+.lead{
+    margin-top: 15px;
+    width: 411px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #8692A6;
+}
+
+/* Estilos de la tabla*/
+
+.table-container {
+    overflow-x: auto;
+    overflow-y: auto;
+  }
+  
+  .table-wrapper {
+    max-height: 400px; /* ajustar a la altura deseada */
+    
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #eee;
+    width: 200px;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  
+ 
+  .pagination1{
+    font-size: 1rem;
+    color: var(--bs-link-color);
+    border-width: var(--bs-border-width);
+    border-color: var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    hover-color: var(--bs-link-hover-color);
+    hover-bg: var(--bs-tertiary-bg);
+    hover-border-color: var(--bs-border-color);
+    focus-color: var(--bs-link-hover-color);
+    focus-bg: var(--bs-secondary-bg);
+    focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    active-color: #fff;
+    active-bg: #0d6efd;
+    active-border-color: #0d6efd;
+    disabled-color: var(--bs-secondary-color);
+    disabled-bg: var(--bs-secondary-bg);
+    disabled-border-color: var(--bs-border-color);
+    padding-left: 0;
+    list-style: none;
+  }
+ 
