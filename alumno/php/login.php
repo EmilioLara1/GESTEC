@@ -14,8 +14,7 @@
     
     // Verificar si se obtuvieron resultados
     if (mysqli_num_rows($resultado) > 0) {
-        echo "Inicio de sesión exitoso";
-        /* header("Location:menu-gestec.html"); */
+        header("Location:menu-gestec.html");
     } else {
         // Inicio de sesión fallido
         echo "Usuario o contraseña incorrectos";
