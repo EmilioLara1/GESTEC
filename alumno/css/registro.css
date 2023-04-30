@@ -5,20 +5,21 @@
 }
 
 body{
-    height: 100vh;
-    background: linear-gradient(135deg, rgba(141, 92, 246, 1), rgba(21, 101, 216, 0.8));
+  /*   height: 100vh;
+    width: 550px;
+    background: linear-gradient(135deg, rgba(141, 92, 246, 1), rgba(21, 101, 216, 0.8)); */
 }
 
 .container-fluid{
     padding: 40px;
-    background-color: #fff;
+    background-color: #c21d1d;
     width: 65%;
     transform: translate(-50%, -50%);
     position: absolute;
     left: 50%;
     top: 50%;
-    border-radius: 15px;
-    box-shadow: 20px 40px 25px rgba(0, 0, 0, 0.15);
+    /* border-radius: 15px;
+    box-shadow: 20px 40px 25px rgba(0, 0, 0, 0.15); */
 }
 
 .form-control,.form-select{

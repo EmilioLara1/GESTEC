@@ -26,9 +26,10 @@ h1{
 }
 
 .btn{
-    width: 295px;
+    width: 250px;
     height: 63px;
     font-weight: 600;
+    margin-top: 25px;
 }
 
 .row, .col{
@@ -39,4 +40,13 @@ h1{
 .col.h-auto .row{
     height: auto;
     margin: 34px;
+}
+
+.form-select{
+    width: 230px;
+}
+
+.cerrar, .cerrar a{
+    text-align: end;
+    text-decoration: none;
 }
