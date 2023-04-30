@@ -19,8 +19,8 @@
 
 <body>
     <div class="container-fluid">
-        <div class="col">
-            <div class="row">
+        <div class="row">
+            <div class="col-auto h-auto">
                 <form action="" method="get">
                     <div class="row">
                         <h1 class="text-center">Datos generales</h1>
@@ -32,10 +32,10 @@
                         <hr>
                     </div>
     
-                    <div class="row mt-3">
-                        <div class="col-auto">
+                    <div class="row">
+                        <div class="col">
                             <div class="row">
-                                <div class="col content">
+                                <div class="col-auto contenido mt-3">
                                     <label for="nombre" class="form-label">Nombre(s)*</label>
                                     <input type="text" class="form-control" name="nombre" id="nombre" maxlength="25" required>
                                     
@@ -46,7 +46,7 @@
                                     <input type="text" class="form-control" name="materno" id="materno" maxlength="25" required>
 
                                     <label for="carrera" class="form-label mt-3">Carrera*</label>
-                                    <select class="form-select" name="carrera" id="carrera" required>
+                                    <select class="form-select form-select-sm" name="carrera" id="carrera" required>
                                         <option selected>Selecciona una opción</option>
                                         <option value="Administracion">Administración</option>
                                         <option value="Administracion Financiera y Sistemas">Administración Financiera y Sistemas</option>
@@ -65,7 +65,7 @@
                                     </select>
                                 </div>
             
-                                <div class="col content">
+                                <div class="col-auto contenido mt-3">
                                     <label for="dom" class="form-label">Domicilio (Calle y número, ej. Juarez 513)*</label>
                                     <input type="text" class="form-control" name="dom" id="dom" maxlength="45" required>
                                     
