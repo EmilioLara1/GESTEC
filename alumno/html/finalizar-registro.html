@@ -21,7 +21,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-auto h-auto">
-                <form action="" method="get">
+                <form action="finalizar-registro.php" method="get">
                     <div class="row">
                         <h1 class="text-center">Finalizar registro</h1>
     
@@ -35,20 +35,23 @@
                     <div class="row mt-3">
                         <div class="col-auto contenido">
                             <label for="correo" class="form-label">Correo electrónico institucional*</label>
-                            <input type="email" class="form-control" id="correo" maxlength="45" required>
+                            <input type="email" class="form-control" name="correo" id="correo" maxlength="45" required>
                             
                             <label for="contraseña" class="form-label mt-3">Contraseña*</label>
                             <input type="password" class="form-control" name="contraseña" id="contraseña" minlength="8" maxlength="8" required>
+
+                            <label for="confirmarContraseña" class="form-label mt-3">Confirmar contraseña*</label>
+                            <input type="password" class="form-control" name="confirmarContraseña" id="confirmarContraseña" minlength="8" maxlength="8" required>
                         </div>
                     </div>
     
                     <div class="row mt-3">
                         <nav>
                             <ul class="pagination m-4">
-                                <li class="page-item"><a class="page-link" href="/alumno/html/registro.html">Regresar</a></li>
-                                <li class="page-item"><a class="page-link" href="/alumno/html/registro.html">1</a></li>
+                                <li class="page-item"><a class="page-link" href="/alumno/html/datos-generales.html">Regresar</a></li>
+                                <li class="page-item"><a class="page-link" href="/alumno/html/datos-generales.html">1</a></li>
                                 <li class="page-item active"><a class="page-link" href="/alumno/html/finalizar-registro.html">2</a></li>
-                                <li class="page-item"><button type="submit" name="finalizar" class="page-link">Finalizar</button></li>
+                                <li class="page-item"><input class="page-link" type="submit" name="finalizar" value="Finalizar"></li>
                             </ul>
                         </nav>
                         <a class="cancel text-center" href="/alumno/html/login.html">Cancelar</a>
