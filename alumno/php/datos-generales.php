@@ -4,23 +4,23 @@
     require_once "conexion.php";
     
     // Si el formulario ha sido enviado
-    if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Recibimos los datos del formulario
-        $codigo = $_GET['codigo'];
+        $codigo = $_POST['codigo'];
 
-		$nombres = $_GET['nombres'];
+		$nombres = $_POST['nombres'];
 
-		$paterno = $_GET['paterno'];
+		$paterno = $_POST['paterno'];
 
-		$materno = $_GET['materno'];
+		$materno = $_POST['materno'];
 
-		$carrera = $_GET['carrera'];
+		$carrera = $_POST['carrera'];
 
-		$domicilio = $_GET['domicilio'];
+		$domicilio = $_POST['domicilio'];
 
-        $colonia = $_GET['colonia'];
+        $colonia = $_POST['colonia'];
 
-		$celular = $_GET['celular'];
+		$celular = $_POST['celular'];
 
         // Creamos la conexión a la base de datos
         $conn = connectDB();
@@ -48,44 +48,4 @@
             exit;
         }
     }
-
-
-	/* if (isset($_REQUEST['siguiente'])) {
-
-		require_once "conexion.php"; // Incluir el archivo de conexión a la base de datos
-
-        // Llamar a la función de conexión a la base de datos
-        $conn = connectDB();
-		
-        // Verificar si se ha enviado el formulario de la página 1
-        $codigo = $_GET['codigo'];
-
-		$nombres = $_GET['nombres'];
-
-		$paterno = $_GET['paterno'];
-
-		$materno = $_GET['materno'];
-
-		$carrera = $_GET['carrera'];
-
-		$domicilio = $_GET['domicilio'];
-
-        $colonia = $_GET['colonia'];
-
-		$celular = $_GET['celular'];
-
-        // Insertar los datos en la tabla "datos"
-        $query = "INSERT INTO usuarios (Codigo, Nombres, Ape_Pat, Ape_Mat, Carrera, Domicilio, Colonia, Celular) VALUES ('$codigo', '$nombres', '$paterno', '$materno', '$carrera', '$domicilio', '$colonia', '$celular')";
-        mysqli_query($conn, $query);
-
-        if (mysqli_num_rows($resultado) > 0) {
-            echo "El usuario ya existe";
-        } else {
-            // Inicio de sesión fallido
-            echo "Registro exitoso";
-        }
-        
-        // Cerrar la conexión a la base de datos
-        mysqli_close($conn);
-	} */
 ?>

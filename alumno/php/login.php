@@ -2,8 +2,8 @@
 	require_once "conexion.php"; // Incluir el archivo de conexión a la base de datos
 
     // Obtener los datos del formulario
-    $correo = $_GET['correo'];
-    $contraseña = $_GET['contraseña'];
+    $correo = $_POST['correo'];
+    $contraseña = $_POST['contraseña'];
     
     // Llamar a la función de conexión a la base de datos
     $conn = connectDB();

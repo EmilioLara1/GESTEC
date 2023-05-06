@@ -4,11 +4,11 @@
     require_once "conexion.php";
     
     // Si el formulario ha sido enviado
-    if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Recibimos los datos del formulario
-        $correo = $_GET['correo'];
-        $contraseña = $_GET['contraseña'];
-        $confirmarContraseña = $_GET['confirmarContraseña'];
+        $correo = $_POST['correo'];
+        $contraseña = $_POST['contraseña'];
+        $confirmarContraseña = $_POST['confirmarContraseña'];
     
         // Comprobamos que las contraseñas coinciden
         if ($contraseña != $confirmarContraseña) {
@@ -50,7 +50,6 @@
                     // Si la consulta se ejecutó correctamente, redirigimos al usuario a la página de inicio con un mensaje de éxito
                     $_SESSION['mensaje'] = 'El registro se ha realizado correctamente.';
                     header('Location: registro-exitoso.html');
-                    exit;
                 } else {
                     // Si la consulta no se ejecutó correctamente, redirigimos al usuario al segundo paso del formulario con un mensaje de error
                     $_SESSION['mensaje'] = 'Ha ocurrido un error al registrar el usuario en la base de datos.';
@@ -70,28 +69,4 @@
         header('Location: datos-generales.html');
         exit;
     }
-
-
-
-    /* require_once "conexion.php"; // Incluir el archivo de conexión a la base de datos
-    
-    // Verificar si se ha enviado el formulario de la página 1
-    $correo = $_GET['correo'];
-
-    $contraseña = $_GET['contraseña'];
-
-    // Llamar a la función de conexión a la base de datos
-    $conn = connectDB();
-
-    // Insertar los datos en la tabla "datos"
-    $query = "INSERT INTO cuentas (Correo, Contraseña) VALUES ('$correo', '$contraseña')";
-
-    if ($conn->query($query) === TRUE) {
-        echo "Usuario registrado correctamente";
-    } else {
-        echo "Error al registrar el usuario: " . $conn->error;
-    }
-    
-    // Cerrar la conexión a la base de datos
-    mysqli_close($conn); */
 ?>

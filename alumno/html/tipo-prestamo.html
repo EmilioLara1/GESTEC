@@ -46,17 +46,19 @@
                                     <hr>
                                 </div>
 
-                                <div class="row m-5">
-                                    <select class="form-select">
-                                        <option selected>Selecciona una opción</option>
-                                        <option value="interno">Interno</option>
-                                        <option value="externo">Externo</option>
-                                    </select>
-                                </div>
-
-                                <div class="row">
-                                    <button type="button" class="btn btn-primary">Continuar</button>
-                                </div>
+                                <form action="tipo-prestamo.php" method="post">
+                                    <div class="row m-5">
+                                        <select class="form-select" name="select">
+                                            <option selected>Selecciona una opción</option>
+                                            <option value="interno">Interno</option>
+                                            <option value="externo">Externo</option>
+                                        </select>
+                                    </div>
+    
+                                    <div class="row">
+                                        <button type="submit" name="continuar" class="btn btn-primary">Continuar</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
 
