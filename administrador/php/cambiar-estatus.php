@@ -1,5 +1,38 @@
-<?php 
+<?php
     require_once "conexion.php";
+
+    // Obtener los datos del formulario
+    $radioInterno = isset($_POST["radioInterno"]) ? $_POST["radioInterno"] : null;
+    $radioExterno = isset($_POST["radioExterno"]) ? $_POST["radioExterno"] : null;
+
+    // Validar los datos recibidos
+    if (!$id || (!$radioInterno && !$radioExterno)) {
+        die("Error: no se recibieron todos los datos necesarios.");
+    }
+
+    // Crear la conexión a la base de datos
+    $conn = connectDB();
+
+    // Actualizar los datos en la tabla
+    if ($radioInterno) {
+        $query = "UPDATE estatus_prestamos SET Estatus = '$radioInterno' WHERE Tipo_Prestamo = INTERNO";
+    } else {
+        $query = "UPDATE estatus_prestamos SET Estatus = '$radioExterno' WHERE Tipo_Prestamo = EXTERNO";
+    }
+
+    $resultado = mysqli_query($conn, $query);
+
+    if (!$resultado) {
+        die("Error al actualizar los datos: " . mysqli_error($conn));
+    }
+
+    // Cerrar la conexión a la base de datos
+    mysqli_close($conn);
+
+    // Redirigir al usuario a la página principal
+    exit();
+
+    /* require_once "conexion.php";
 
     // Obtiene el valor del radio enviado por el formulario
     $radioInterno = $_POST['radioInterno'];
@@ -67,5 +100,5 @@
         // Si no se seleccionó ninguna opción, redirige a una página de error
         echo "No seleccionaste ninguna opción.";
         exit();
-    }
+    } */
 ?>

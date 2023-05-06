@@ -41,7 +41,7 @@
                                 <div class="row-auto">
                                     <h1 class="text-center mb-4">Cambiar estatus</h1>
 
-                                    <p class="lead text-center">Puedes abrir o cerrar las solicitudes de los <br/> préstamos internos y externos</p>
+                                    <p class="lead text-center">Puedes habilitar o deshabilitar las solicitudes de los <br/> préstamos internos y externos</p>
                                 </div>
                             
                                 <div class="row">
@@ -50,17 +50,22 @@
                                 
                                 <form action="cambiar-estatus.php" method="post" class="p-0">
                                     <div class="row mt-3">
-                                        <div class="col-auto">
-                                            <label class="mb-2"><strong>Estatus del préstamo interno</strong></label>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault radioInterno" value="internoAbierto" id="flexRadioDefault1" checked>
-                                                <label class="form-check-label" for="flexRadioDefault1">Solicitudes abiertas</label>
-                                            </div>
-    
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault radioInterno" value="internoCerrado" id="flexRadioDefault1">
-                                                <label class="form-check-label w-auto" for="flexRadioDefault1">Solicitudes cerradas</label>
-                                            </div>
+                                        <div class="form-group col-auto text-center m-3">
+                                            <label class="mb-3"><strong>Préstamo interno</strong></label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Selecciona una opción</option>
+                                                <option value="abrir">Habilitar</option>
+                                                <option value="cerrar">Desabilitar</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group col-auto text-center m-3">
+                                            <label class="mb-3"><strong>Préstamo externo</strong></label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Selecciona una opción</option>
+                                                <option value="abrir">Habilitar</option>
+                                                <option value="cerrar">Desabilitar</option>
+                                            </select>
                                         </div>
                                     </div>
 
@@ -69,7 +74,7 @@
                                     </div>
                                 </form>
 
-                                <form action="cambiar-estatus.php" method="post" class="p-0">
+                                <!-- <form action="cambiar-estatus.php" method="post" class="p-0">
                                     <div class="row mt-5">
                                         <div class="col-auto">
                                             <label class="mb-2"><strong>Estatus del préstamo externo</strong></label>
@@ -88,7 +93,7 @@
                                     <div class="row mt-3">
                                         <button type="submit" name="actualizarExterno" class="btn btn-primary">Actulizar</button>
                                     </div>
-                                </form>
+                                </form> -->
                             </div>
                         </div>
                     </div>
