@@ -2,14 +2,15 @@
     require_once "conexion.php";
 
     // Obtiene el valor del radio enviado por el formulario
-    $radio = $_POST['radio'];
+    $radioInterno = $_POST['radioInterno'];
+    $radioExterno = $_POST['radioExterno'];
 
     // Llamar a la función de conexión a la base de datos
     $conn = connectDB();
   
     // Verifica qué opción se seleccionó y redirige a la página correspondiente
-    if ($radio == "internoAbierto") {
-        $queryInternoAbierto = "UPDATE estatus_prestamos SET Estatus ='$radio' WHERE Tipo_Prestamo = INTERNO";
+    if ($radioInterno == "internoAbierto") {
+        $queryInternoAbierto = "UPDATE estatus_prestamos SET Estatus ='$radioInterno' WHERE Tipo_Prestamo = INTERNO";
 
         // Ejecutamos la consulta SQL para insertar los datos del usuario en la tabla "usuarios"
         if ($conn->query($queryInternoAbierto) === TRUE) {
@@ -20,8 +21,8 @@
             echo "Cambios no aplicados";
             exit();
         }
-    } else if ($radio == "internoCerrado") {
-        $queryInternoCerrado = "UPDATE estatus_prestamos SET Estatus ='$radio' WHERE Tipo_Prestamo = INTERNO";
+    } else if ($radioInterno == "internoCerrado") {
+        $queryInternoCerrado = "UPDATE estatus_prestamos SET Estatus ='$radioInterno' WHERE Tipo_Prestamo = INTERNO";
 
         // Ejecutamos la consulta SQL para insertar los datos del usuario en la tabla "usuarios"
         if ($conn->query($queryInternoCerrado) === TRUE) {
@@ -32,8 +33,14 @@
             echo "Cambios no aplicados";
             exit();
         }
-    } else if ($radio == "externoAbierto") {
-        $queryExternoAbierto = "UPDATE estatus_prestamos SET Estatus ='$radio' WHERE Tipo_Prestamo = EXTERNO";
+    } else {
+        // Si no se seleccionó ninguna opción, redirige a una página de error
+        echo "No seleccionaste ninguna opción.";
+        exit();
+    }
+    
+    if ($radioExterno == "externoAbierto") {
+        $queryExternoAbierto = "UPDATE estatus_prestamos SET Estatus ='$radioExterno' WHERE Tipo_Prestamo = EXTERNO";
 
         // Ejecutamos la consulta SQL para insertar los datos del usuario en la tabla "usuarios"
         if ($conn->query($queryExternoAbierto) === TRUE) {
@@ -44,8 +51,8 @@
             echo "Cambios no aplicados";
             exit();
         }
-    } else if ($radio == "externoCerrado") {
-        $queryExternoCerrado = "UPDATE estatus_prestamos SET Estatus ='$radio' WHERE Tipo_Prestamo = EXTERNO";
+    } else if ($radioExterno == "externoCerrado") {
+        $queryExternoCerrado = "UPDATE estatus_prestamos SET Estatus ='$radioExterno' WHERE Tipo_Prestamo = EXTERNO";
 
         // Ejecutamos la consulta SQL para insertar los datos del usuario en la tabla "usuarios"
         if ($conn->query($queryExternoCerrado) === TRUE) {
