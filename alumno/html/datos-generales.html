@@ -14,14 +14,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/alumno/css/registro.css">
+    <link rel="stylesheet" href="/alumno/css/datos-generales.css">
 </head>
 
 <body>
     <div class="container-fluid">
-        <div class="col">
-            <div class="row">
-                <form action="">
+        <div class="row">
+            <div class="col-auto h-auto">
+                <form action="datos-generales.php" method="post">
                     <div class="row">
                         <h1 class="text-center">Datos generales</h1>
     
@@ -32,12 +32,12 @@
                         <hr>
                     </div>
     
-                    <div class="row mt-3">
-                        <div class="col-auto">
+                    <div class="row">
+                        <div class="col">
                             <div class="row">
-                                <div class="col content">
-                                    <label for="nombre" class="form-label">Nombre(s)*</label>
-                                    <input type="text" class="form-control" name="nombre" id="nombre" maxlength="25" required>
+                                <div class="col-auto contenido mt-3">
+                                    <label for="nombres" class="form-label">Nombre(s)*</label>
+                                    <input type="text" class="form-control" name="nombres" id="nombres" maxlength="25" required>
                                     
                                     <label for="paterno" class="form-label mt-3">Apellido paterno*</label>
                                     <input type="text" class="form-control" name="paterno" id="paterno" maxlength="25" required>
@@ -46,7 +46,7 @@
                                     <input type="text" class="form-control" name="materno" id="materno" maxlength="25" required>
 
                                     <label for="carrera" class="form-label mt-3">Carrera*</label>
-                                    <select class="form-select" name="carrera" id="carrera" required>
+                                    <select class="form-select form-select-sm" name="carrera" id="carrera" required>
                                         <option selected>Selecciona una opción</option>
                                         <option value="Administracion">Administración</option>
                                         <option value="Administracion Financiera y Sistemas">Administración Financiera y Sistemas</option>
@@ -65,18 +65,18 @@
                                     </select>
                                 </div>
             
-                                <div class="col content">
-                                    <label for="dom" class="form-label">Domicilio (Calle y número, ej. Juarez 513)*</label>
-                                    <input type="text" class="form-control" name="dom" id="dom" maxlength="45" required>
+                                <div class="col-auto contenido mt-3">
+                                    <label for="domicilio" class="form-label">Domicilio (Calle y número, ej. Juarez 513)*</label>
+                                    <input type="text" class="form-control" name="domicilio" id="domicilio" maxlength="45" required>
                                     
                                     <label for="colonia" class="form-label mt-3">Colonia*</label>
                                     <input type="text" class="form-control" name="colonia" id="colonia" maxlength="40" required>
                     
-                                    <label for="cel" class="form-label mt-3">Celular*</label>
-                                    <input type="tel" class="form-control" name="cel" id="cel" maxlength="10" required>
+                                    <label for="celular" class="form-label mt-3">Celular*</label>
+                                    <input type="tel" class="form-control" name="celular" id="celular" maxlength="10" required>
             
-                                    <label for="cod" class="form-label mt-3">Código*</label>
-                                    <input type="number" class="form-control" name="cod" id="cod" maxlength="9" required>
+                                    <label for="codigo" class="form-label mt-3">Código*</label>
+                                    <input type="number" class="form-control" name="codigo" id="codigo" maxlength="9" required>
                                 </div>
                             </div>
                         </div>
@@ -86,9 +86,9 @@
                         <nav>
                             <ul class="pagination m-4">
                                 <li class="page-item"><a class="page-link" href="/alumno/html/index-usuario.html">Regresar</a></li>
-                                <li class="page-item active"><a class="page-link" href="/alumno/html/registro.html">1</a></li>
+                                <li class="page-item active"><a class="page-link" href="/alumno/html/datos-generales.html">1</a></li>
                                 <li class="page-item"><a class="page-link" href="/alumno/html/finalizar-registro.html">2</a></li>
-                                <li class="page-item"><a class="page-link" href="/alumno/html/finalizar-registro.html">Siguiente</a></li>
+                                <li class="page-item"><button type="submit" name="siguiente" class="page-link">Siguiente</button></li>
                             </ul>
                         </nav>
                         <a class="cancel text-center" href="/alumno/html/login.html">Cancelar</a>

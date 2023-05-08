@@ -25,11 +25,12 @@ h1{
     height: 1px;
 }
 
-.btn{
+/* .btn{
     width: 250px;
     height: 63px;
     font-weight: 600;
-}
+    margin-top: 25px;
+} */
 
 .row, .col{
     padding: 0;
@@ -41,7 +42,16 @@ h1{
     margin: 34px;
 }
 
+.form-select{
+    width: 230px;
+}
+
 .cerrar, .cerrar a{
     text-align: end;
     text-decoration: none;
 }
+
+.t{
+    width: 500px;
+}
+
