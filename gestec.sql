@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-05-2023 a las 02:30:07
+-- Tiempo de generación: 20-05-2023 a las 23:19:32
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -176,8 +176,8 @@ ALTER TABLE `equipos`
 --
 ALTER TABLE `prestamos`
   ADD PRIMARY KEY (`Folio`),
-  ADD KEY `ID` (`ID`),
-  ADD KEY `Codigo` (`Codigo`);
+  ADD KEY `Codigo` (`Codigo`),
+  ADD KEY `ID` (`ID`);
 
 --
 -- Indices de la tabla `usuarios`
@@ -193,6 +193,12 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `equipos`
 --
 ALTER TABLE `equipos`
+  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `prestamos`
+--
+ALTER TABLE `prestamos`
   MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT;
 
 --
@@ -215,8 +221,8 @@ ALTER TABLE `documentos`
 -- Filtros para la tabla `prestamos`
 --
 ALTER TABLE `prestamos`
-  ADD CONSTRAINT `prestamos_ibfk_1` FOREIGN KEY (`ID`) REFERENCES `equipos` (`ID`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `prestamos_ibfk_2` FOREIGN KEY (`Codigo`) REFERENCES `usuarios` (`Codigo`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `prestamos_ibfk_2` FOREIGN KEY (`Codigo`) REFERENCES `usuarios` (`Codigo`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `prestamos_ibfk_3` FOREIGN KEY (`ID`) REFERENCES `equipos` (`ID`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
