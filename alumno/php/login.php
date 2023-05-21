@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     require_once "conexion.php"; // Incluir el archivo de conexión a la base de datos
 
     // Obtener los datos del formulario
@@ -25,6 +27,8 @@
     }
 
     if (mysqli_num_rows($resultadoUsuario) > 0) {
+        $_SESSION['correo'] = $correo;
+        $_SESSION['contraseña'] = $contraseña;
         header("Location:tipo-prestamo.html");
         exit;
     } else {

@@ -44,9 +44,13 @@
                         <div class="row">
                             <p class="lead text-center">
                                 <?php
+                                    session_start();
+
                                     require_once "conexion.php";
 
                                     $conn = connectDB();
+
+                                    if (isset($_SESSION['correo']) && isset($_SESSION['contraseña'])) {
 
                                     $folio = generarFolio();
 
@@ -57,14 +61,36 @@
                                         // Si el folio ya existe, generar uno nuevo
                                         $folio = generarFolio();
                                         $query = "SELECT Folio FROM prestamos WHERE Folio = '$folio'";
-                                        $resultado = $conn->query($query);
+                                        $resultado = mysqli_query($conn, $query);
                                     }
-
-                                    $query = "INSERT INTO prestamos (Folio) VALUES ('$folio')";
-                                    if ($conn->query($query) === TRUE) {
-                                        echo $folio;
+                                    
+                                        // Obtener los datos de la sesión
+                                        $correo = $_SESSION['correo'];
+                                        $contraseña = $_SESSION['contraseña'];
+                                    
+                                        // Consulta SQL utilizando un JOIN para obtener el código del usuario actual
+                                        $query = "SELECT codigo FROM cuentas WHERE correo = '$correo' AND contraseña = '$contraseña'";
+                                        $resultado = mysqli_query($conn, $query);
+                                    
+                                        // Verificar si se obtuvieron resultados
+                                        if (mysqli_num_rows($resultado) > 0) {
+                                            $fila = mysqli_fetch_assoc($resultado);
+                                            $codigoUsuario = $fila['codigo'];
+                                    
+                                            // Realizar la inserción en la tabla "prestamos" utilizando el código del usuario
+                                            $queryInsercion = "INSERT INTO prestamos (folio,codigo) VALUES ('$folio','$codigoUsuario')";
+                                            $resultadoInsercion = mysqli_query($conn, $queryInsercion);
+                                    
+                                            if ($resultadoInsercion) {
+                                                echo $folio;
+                                            } else {
+                                                echo "Error al insertar el código en la tabla prestamos";
+                                            }
+                                        } else {
+                                            echo "No se encontró el usuario en la tabla cuentas";
+                                        }
                                     } else {
-                                        echo "Error al insertar el folio en la base de datos: " . $conn->error;
+                                        echo "Sesión no iniciada";
                                     }
 
                                     $conn->close();
