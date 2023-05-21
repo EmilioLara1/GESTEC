@@ -42,14 +42,45 @@
                             <p class="lead text-center folio">Folio</p>
                         </div>
                         <div class="row">
-                            <p class="lead text-center"> número de folio </p>
+                            <p class="lead text-center">
+                                <?php
+                                    require_once "conexion.php";
+
+                                    $conn = connectDB();
+
+                                    $folio = generarFolio();
+
+                                    $query = "SELECT Folio FROM prestamos WHERE Folio = '$folio'";
+                                    $resultado = $conn->query($query);
+
+                                    while (mysqli_num_rows($resultado) > 0) {
+                                        // Si el folio ya existe, generar uno nuevo
+                                        $folio = generarFolio();
+                                        $query = "SELECT Folio FROM prestamos WHERE Folio = '$folio'";
+                                        $resultado = $conn->query($query);
+                                    }
+
+                                    $query = "INSERT INTO prestamos (Folio) VALUES ('$folio')";
+                                    if ($conn->query($query) === TRUE) {
+                                        echo $folio;
+                                    } else {
+                                        echo "Error al insertar el folio en la base de datos: " . $conn->error;
+                                    }
+
+                                    $conn->close();
+
+                                    function generarFolio() {
+                                        return rand(10000, 99999);
+                                    }
+                                ?>
+                            </p>
                         </div>
                         <div class="row">
                             <hr>
                         </div>
 
                         <div class="row">
-                            <button type="button" class="btn btn-outline-secondary"> Cerrar sesión </button>
+                            <button type="button" class="btn btn-outline-secondary">Cerrar sesión</button>
                         </div>
                     </div>
                 </div>

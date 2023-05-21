@@ -13,7 +13,7 @@
         $resultado = mysqli_query($conn, $query);
         
         if (mysqli_num_rows($resultado) > 0) {
-            header("Location: solicitud-aceptada-interno.html");
+            header("Location: solicitud-aceptada-interno.html.php");
             exit();
         } else {
             header("Location: solicitud-rechazada.html");
