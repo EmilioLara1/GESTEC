@@ -14,7 +14,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/alumno/css/subir-documentos.css">
 
-    <title>Solicitud rechazada</title>
+    <title>Subir documentos</title>
     <link rel="shortcut icon" href="/imgs/icono.png">
 </head>
 
@@ -39,7 +39,7 @@
                         
                         <div class="row">
                             <div class="col-auto h-auto  form-group">
-                                <form action="subir-documentos.php" method="POST">
+                                <form action="subir-documentos.php" method="POST" enctype="multipart/form-data">
                                     <div class="row">
                                         <i class="bi bi-file-earmark text-center m-3"></i>
 
@@ -58,13 +58,13 @@
                                             </ul>
 
                                             <div class="input-group p-4">
-                                                <input type="file" class="form-control" id="inputGroupFile02">
+                                                <input type="file" name="archivoPDF" class="form-control" id="inputGroupFile02"  accept="application/pdf">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="row mt-5">
-                                        <button type="submit" name="continuar" class="btn btn-primary">Continuar</button>
+                                        <input class="btn btn-primary" type="submit" name="continuar" value="Continuar">
                                     </div>
                                 </form>
                             </div>

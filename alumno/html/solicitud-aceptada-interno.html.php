@@ -52,17 +52,17 @@
 
                                     if (isset($_SESSION['correo']) && isset($_SESSION['contraseña'])) {
 
-                                    $folio = generarFolio();
-
-                                    $query = "SELECT Folio FROM prestamos WHERE Folio = '$folio'";
-                                    $resultado = $conn->query($query);
-
-                                    while (mysqli_num_rows($resultado) > 0) {
-                                        // Si el folio ya existe, generar uno nuevo
                                         $folio = generarFolio();
+
                                         $query = "SELECT Folio FROM prestamos WHERE Folio = '$folio'";
-                                        $resultado = mysqli_query($conn, $query);
-                                    }
+                                        $resultado = $conn->query($query);
+
+                                        while (mysqli_num_rows($resultado) > 0) {
+                                            // Si el folio ya existe, generar uno nuevo
+                                            $folio = generarFolio();
+                                            $query = "SELECT Folio FROM prestamos WHERE Folio = '$folio'";
+                                            $resultado = mysqli_query($conn, $query);
+                                        }
                                     
                                         // Obtener los datos de la sesión
                                         $correo = $_SESSION['correo'];
