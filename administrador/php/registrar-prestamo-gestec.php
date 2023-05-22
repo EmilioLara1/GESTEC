@@ -10,16 +10,30 @@
         // Obtener el valor seleccionado del select
         $id = $_POST["id"];
 
-        $queryID = "INSERT INTO prestamos (ID) VALUES ('$id')";
+        $folio = $_SESSION['folio'];
 
-        if ($conn->query($queryID) === TRUE) {
-            echo "ID registrado";
+        $query = "SELECT folio FROM prestamos WHERE folio = '$folio'";
+        $resultado = mysqli_query($conn, $query);
+
+        if (mysqli_num_rows($resultado) > 0) {
+            $fila = mysqli_fetch_assoc($resultado);
+            $folioUsuario = $fila['folio'];
+    
+            // Realizar la inserción en la tabla "prestamos" utilizando el código del usuario
+            $queryID = "INSERT INTO prestamos (ID) VALUES ('$id')";
+            $resultadoInsercion = mysqli_query($conn, $queryID);
+    
+            if ($resultadoInsercion) {
+                echo "ID registrado";
+            } else {
+                // Si la consulta no se ejecutó correctamente, redirigimos al usuario al segundo paso del formulario con un mensaje de error
+                echo "Ha ocurrido un error al registrar el id en la base de datos";
+            }
         } else {
-            // Si la consulta no se ejecutó correctamente, redirigimos al usuario al segundo paso del formulario con un mensaje de error
-            echo "Ha ocurrido un error al registrar el id en la base de datos";
+            echo "No se encontró el folio en la tabla prestamos";
         }
         
-        $query = "SELECT Fecha_Prestamo, Fecha_Devolucion FROM prestamo WHERE ID = $id";
+        $query = "SELECT Fecha_Prestamo, Fecha_Devolucion FROM prestamos WHERE ID = $id AND folio = '$folio'";
         $resultado = mysqli_query($conn, $query);
 
         // Obtener las fechas de entrega y devolución
