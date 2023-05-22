@@ -12,27 +12,28 @@
 
         $folio = $_SESSION['folio'];
 
-        $query = "SELECT folio FROM prestamos WHERE folio = '$folio'";
-        $resultado = mysqli_query($conn, $query);
+        $queryID = "UPDATE prestamos SET ID = '$id' WHERE Folio = '$folio'";
+        $resultadoInsercion = mysqli_query($conn, $queryID);
 
-        if (mysqli_num_rows($resultado) > 0) {
-            $fila = mysqli_fetch_assoc($resultado);
-            $folioUsuario = $fila['folio'];
-    
-            // Realizar la inserción en la tabla "prestamos" utilizando el código del usuario
-            $queryID = "INSERT INTO prestamos (ID) VALUES ('$id')";
-            $resultadoInsercion = mysqli_query($conn, $queryID);
-    
-            if ($resultadoInsercion) {
-                echo "ID registrado";
-            } else {
-                // Si la consulta no se ejecutó correctamente, redirigimos al usuario al segundo paso del formulario con un mensaje de error
-                echo "Ha ocurrido un error al registrar el id en la base de datos";
-            }
-        } else {
-            echo "No se encontró el folio en la tabla prestamos";
-        }
+        // Obtener la fecha de entrega actual
+        $consultaFechaPrestamo = "SELECT Fecha_Prestamo FROM prestamos WHERE ID = $id AND folio = '$folio'";
+        $resultadoFechaPrestamo = mysqli_query($conn, $consultaFechaPrestamo);
+        $filaFechaPrestamo = mysqli_fetch_assoc($resultadoFechaPrestamo);
+        $fechaFechaPrestamo = $filaFechaPrestamo['Fecha_Prestamo'];
+
+        // Calcular la fecha de devolución (3 horas después)
+        $fechaDevolucion = date('Y-m-d H:i:s', strtotime($fechaFechaPrestamo . ' + 3 hours'));
+
+        // Actualizar la fecha de devolución en la tabla
+        $consulta = "UPDATE prestamos SET Fecha_Devolucion = '$fechaDevolucion'";
+
+        if (mysqli_query($conn, $consulta)) {
+            echo "Fecha de devolución actualizada exitosamente.";
+          } else {
+            echo "Error al actualizar la fecha de devolución: " . mysqli_error($conn);
+          }
         
+        // Ingresar estatus
         $query = "SELECT Fecha_Prestamo, Fecha_Devolucion FROM prestamos WHERE ID = $id AND folio = '$folio'";
         $resultado = mysqli_query($conn, $query);
 
@@ -46,32 +47,37 @@
         $fechaDevolucionObj = new DateTime($fechaDevolucion);
 
         // Calcular la diferencia en días entre las fechas
-        $diferenciaDias = $fechaPrestamoObj->diff($fechaDevolucionObj)->days;
+        $diferenciaDias = $fechaPrestamoObj->diff($fechaDevolucionObj);
+
+        // Obtener la diferencia en días y horas
+        $dias = $diferencia->days;
+        $horas = $diferencia->h;
 
         // Determinar el estado del préstamo
-        if ($diferenciaDias > 0) {
+        if ($dias > 0 || $horas > 0) {
             $estado = "RETRASADO";
-            $query = "INSERT INTO prestamos (Estatus) VALUES ('$estado')";
+            $query = "UPDATE prestamos SET Estatus = '$estatus' WHERE Folio = '$folio'";
             if ($conn->query($query) === TRUE) {
-                echo "Estatus registrado";
+                header("Location: prestamo-denegado.html");
             } else {
                 // Si la consulta no se ejecutó correctamente, redirigimos al usuario al segundo paso del formulario con un mensaje de error
                 echo "Ha ocurrido un error al registrar el estatus en la base de datos";
             }
         } else {
             $estado = "ACTIVO";
-            $query = "INSERT INTO prestamos (Estatus) VALUES ('$estado')";
+            $query = "UPDATE prestamos SET Estatus = '$estatus' WHERE Folio = '$folio'";
             if ($conn->query($query) === TRUE) {
-                echo "Estatus registrado";
+                header("Location: prestamo-resgistrado.html");
             } else {
                 // Si la consulta no se ejecutó correctamente, redirigimos al usuario al segundo paso del formulario con un mensaje de error
                 echo "Ha ocurrido un error al registrar el estatus en la base de datos";
             }
         }
 
+
         // Liberar memoria y cerrar la conexión
         mysqli_free_result($resultado);
-        mysqli_close($conexion);
+        mysqli_close($conn);
     }
 
     
