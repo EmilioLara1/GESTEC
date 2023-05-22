@@ -27,28 +27,40 @@
         $fechaPrestamoObj = new DateTime($fechaPrestamo);
         $fechaDevolucionObj = new DateTime($fechaDevolucion);
 
-        // Calcular la diferencia en días entre las fechas
-        $diferenciaDias = $fechaPrestamoObj->diff($fechaDevolucionObj)->days;
+        // Sumar 3 horas a la fecha de préstamo
+        $fechaDevolucionObj->add(new DateInterval('PT3H'));
 
-        // Determinar el estado del préstamo
-        if ($diferenciaDias > 0) {
+        // Formatear la fecha de devolución
+        $nuevaFechaDevolucion = $fechaDevolucionObj->format('Y-m-d H:i:s');
+
+        // Actualizar la fecha de devolución en la base de datos
+        $queryFechaDevolucion = "UPDATE prestamos SET Fecha_Devolucion = '$nuevaFechaDevolucion' WHERE Folio = '$folio'";
+        $resultadoFechaDevolucion = mysqli_query($conn, $queryFechaDevolucion);
+
+        // Obtener la fecha actual
+        $fechaActual = new DateTime();
+        $fechaActual->setTime(0, 0, 0);
+
+        // Comparar solo la fecha de devolución con la fecha actual
+        $fechaDevolucionComparar = $fechaDevolucionObj->format('Y-m-d H:i:s');
+        $fechaActualComparar = $fechaActual->format('Y-m-d H:i:s');
+
+        if ($fechaDevolucionComparar < $fechaActualComparar) {
             $estatus = "RETRASADO";
-            $query = "UPDATE prestamos SET Estatus = '$estatus' WHERE Folio = '$folio'";
-            if ($conn->query($query) === TRUE) {
-                header("Location: prestamo-denegado.html");
-            } else {
-                // Si la consulta no se ejecutó correctamente, redirigimos al usuario al segundo paso del formulario con un mensaje de error
-                echo "Ha ocurrido un error al registrar el estatus en la base de datos";
-            }
+            
+            // Actualizar el estado del préstamo en la base de datos
+            $queryEstatus = "UPDATE prestamos SET Estatus = '$estatus' WHERE Folio = '$folio'";
+            $resultadoEstatus = mysqli_query($conn, $queryEstatus);
+
+            header("Location: prestamo-denegado.html");
         } else {
             $estatus = "ACTIVO";
-            $query = "UPDATE prestamos SET Estatus = '$estatus' WHERE Folio = '$folio'";
-            if ($conn->query($query) === TRUE) {
-                header("Location: prestamo-resgistrado.html");
-            } else {
-                // Si la consulta no se ejecutó correctamente, redirigimos al usuario al segundo paso del formulario con un mensaje de error
-                echo "Ha ocurrido un error al registrar el estatus en la base de datos";
-            }
+
+            // Actualizar el estado del préstamo en la base de datos
+            $queryEstatus = "UPDATE prestamos SET Estatus = '$estatus' WHERE Folio = '$folio'";
+            $resultadoEstatus = mysqli_query($conn, $queryEstatus);
+
+            header("Location: prestamo-registrado.html");
         }
 
         // Liberar memoria y cerrar la conexión
