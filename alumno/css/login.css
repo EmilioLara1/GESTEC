@@ -10,7 +10,6 @@
 h1{
     font-weight: 700;
     font-size: 40px;
-    margin: 34px;
 }
 
 .row, .col{
@@ -25,7 +24,6 @@ h1{
 }
 
 .form-control{
-    width: 426px;
     height: 43px;
 }
 
