@@ -17,7 +17,7 @@ h1{
     font-weight: 400;
     font-size: 20px;
     color: #8692A6;
-    
+    width: 411px;
 }
 
 .row hr{
@@ -40,7 +40,7 @@ h1{
 
 .col.h-auto .row{
     height: auto;
-    /* margin: 34px; */
+    margin: 34px;
 }
 
 .bi{
@@ -52,12 +52,6 @@ h1{
     font-weight: 700;
     font-size: 32px;
     color: #3C95FF;
-}
-
-.row1{
-    /*  width: 60%;*/
-    margin: 0;
-    padding: 0;
 }
 
 .cerrar, .cerrar a{

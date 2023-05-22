@@ -21,7 +21,7 @@
     <div class="container-fluid">
         <div class="col">
             <div class="row">
-                <form action="">
+                <form action="registrar-prestamo-gestec.php" method="POST">
                     <div class="row">
                         <h1 class="text-center">Registrar préstamo</h1>
     
@@ -37,33 +37,37 @@
                             <div class="row m-4 content">
                                 <div class="col-auto">
                                     <label class="p-0 m-2"><strong>Selecciona el tipo de equipo*</strong></label>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">Laptop y cargador</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                        <label class="form-check-label" for="flexRadioDefault2">Tablet y cargador</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                        <label class="form-check-label" for="flexRadioDefault2">Cable VGA</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                        <label class="form-check-label" for="flexRadioDefault2">Cable Ethernet</label>
-                                    </div>
+                                    <select class="form-select" name="tipo">
+                                        <option selected>Selecciona una opción</option>
+                                        <option value="Laptop">Laptop y cargador</option>
+                                        <option value="Tablet">Tablet y cargador</option>
+                                        <option value="Cable VGA">Cable VGA</option>
+                                        <option value="Cable Ethernet">Cable Ethernet</option>
+                                    </select>
                                 </div>
                             </div>
                             
                             <div class="row m-4 content">
                                 <div class="col-auto">
                                     <label class="p-0 m-2"><strong>ID del equipo*</strong></label>
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select class="form-select" name="id">
                                         <option selected>Selecciona una opción</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
+                                        <?php
+                                            require_once "conexion.php";
+                                        
+                                            // Llamar a la función de conexión a la base de datos
+                                            $conn = connectDB();
+
+                                            $query = "SELECT ID FROM equipos";
+                                            $resultado = mysqli_query($conn, $query);
+
+                                            while ($fila = mysqli_fetch_assoc($resultado)) {
+                                                echo "<option value='" . $fila['ID'] . "'>" . $fila['ID'] . "</option>";
+                                            }
+
+                                            mysqli_free_result($resultado);
+                                            mysqli_close($conn);
+                                        ?>
                                     </select>
                                 </div>
                             </div>

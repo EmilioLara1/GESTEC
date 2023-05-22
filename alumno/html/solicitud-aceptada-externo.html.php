@@ -76,9 +76,11 @@
                                         if (mysqli_num_rows($resultado) > 0) {
                                             $fila = mysqli_fetch_assoc($resultado);
                                             $codigoUsuario = $fila['codigo'];
+
+                                            $select = $_SESSION['select'];
                                     
                                             // Realizar la inserción en la tabla "prestamos" utilizando el código del usuario
-                                            $queryInsercion = "INSERT INTO prestamos (folio,codigo) VALUES ('$folio','$codigoUsuario')";
+                                            $queryInsercion = "INSERT INTO prestamos (folio,codigo,tipo) VALUES ('$folio','$codigoUsuario','$select')";
                                             $resultadoInsercion = mysqli_query($conn, $queryInsercion);
                                     
                                             if ($resultadoInsercion) {

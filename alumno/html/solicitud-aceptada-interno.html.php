@@ -52,21 +52,22 @@
 
                                     if (isset($_SESSION['correo']) && isset($_SESSION['contraseña'])) {
 
-                                    $folio = generarFolio();
-
-                                    $query = "SELECT Folio FROM prestamos WHERE Folio = '$folio'";
-                                    $resultado = $conn->query($query);
-
-                                    while (mysqli_num_rows($resultado) > 0) {
-                                        // Si el folio ya existe, generar uno nuevo
                                         $folio = generarFolio();
+
                                         $query = "SELECT Folio FROM prestamos WHERE Folio = '$folio'";
-                                        $resultado = mysqli_query($conn, $query);
-                                    }
+                                        $resultado = $conn->query($query);
+
+                                        while (mysqli_num_rows($resultado) > 0) {
+                                            // Si el folio ya existe, generar uno nuevo
+                                            $folio = generarFolio();
+                                            $query = "SELECT Folio FROM prestamos WHERE Folio = '$folio'";
+                                            $resultado = mysqli_query($conn, $query);
+                                        }
                                     
                                         // Obtener los datos de la sesión
                                         $correo = $_SESSION['correo'];
                                         $contraseña = $_SESSION['contraseña'];
+                                        
                                     
                                         // Consulta SQL utilizando un JOIN para obtener el código del usuario actual
                                         $query = "SELECT codigo FROM cuentas WHERE correo = '$correo' AND contraseña = '$contraseña'";
@@ -76,13 +77,16 @@
                                         if (mysqli_num_rows($resultado) > 0) {
                                             $fila = mysqli_fetch_assoc($resultado);
                                             $codigoUsuario = $fila['codigo'];
+
+                                            $select = $_SESSION['select'];
                                     
                                             // Realizar la inserción en la tabla "prestamos" utilizando el código del usuario
-                                            $queryInsercion = "INSERT INTO prestamos (folio,codigo) VALUES ('$folio','$codigoUsuario')";
+                                            $queryInsercion = "INSERT INTO prestamos (folio,codigo,tipo) VALUES ('$folio','$codigoUsuario','$select')";
                                             $resultadoInsercion = mysqli_query($conn, $queryInsercion);
                                     
                                             if ($resultadoInsercion) {
                                                 echo $folio;
+                                                $_SESSION['folio'] = $folio;
                                             } else {
                                                 echo "Error al insertar el código en la tabla prestamos";
                                             }
