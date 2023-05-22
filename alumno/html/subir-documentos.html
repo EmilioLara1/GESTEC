@@ -28,45 +28,46 @@
 
             <!-- Contenido -->
             <div class="col p-0">
-                <div class="row m-0 p-0">
-                    <div class="col h-auto">
+                <div class="row">
+                    <div class="col p-5 h-auto">
                         
-                        <div class="row cerrar">
+                        <div class="row-auto cerrar">
                             <div class="col">
                                 <p><a href="/alumno/html/index-usuario.html">Cerrar sesión</a></p>
                             </div>
                         </div>
                         
-                        <div class="row ">
-                            <i class="bi bi-file-earmark text-center m-3"></i>
-
-                            <h1 class="h-auto text-center">Sube tus documentos</h1>
-                        </div>
-
                         <div class="row">
-                            <div class="row1 col-ms-9 col-xs-9 col-md-8 col-lg-7 col-xl-7">
-                                <p class="lead text-center p-3" >En <strong>un solo archivo PDF </strong>sube los siguientes documentos: </p>
-                                <ul class="lista">
-                                    
-                                    <li>Credencial de estudiante vigente</li>
-                                    <li>INE o pasaporte</li>
-                                    <li>Comprobante de domicilio (no mayor a 3 meses)</li>
-                                    <p> <strong>Nota: El domicilio del comprobante debe coincidir con la INE</strong></p>
-                                </ul>
+                            <div class="col-auto h-auto  form-group">
+                                <form action="subir-documentos.php" method="POST">
+                                    <div class="row">
+                                        <i class="bi bi-file-earmark text-center m-3"></i>
 
-                                <div class="input-group p-4">
-                                    <input type="file" class="form-control" id="inputGroupFile02">
-                                    <!-- <label class="input-group-text" for="inputGroupFile02">Upload</label> -->
-                                </div>
+                                        <h1 class="text-center">Sube tus documentos</h1>
+                                        <p class="lead text-center p-3" >En <strong>un solo archivo PDF </strong>sube los siguientes documentos: </p>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-auto">
+                                            <ul class="lista">
+                                                <li>Credencial de estudiante vigente</li>
+                                                <li>INE o pasaporte</li>
+                                                <li>Comprobante de domicilio (no mayor a 3 meses)</li>
+                                                <br>
+                                                <p><strong>Nota: El domicilio del comprobante debe coincidir con la INE</strong></p>
+                                            </ul>
+
+                                            <div class="input-group p-4">
+                                                <input type="file" class="form-control" id="inputGroupFile02">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-5">
+                                        <button type="submit" name="continuar" class="btn btn-primary">Continuar</button>
+                                    </div>
+                                </form>
                             </div>
-
-                            
-                      <!--   <div class="row">
-                            <hr>
-                        </div> -->
-
-                        <div class="row mt-5">
-                            <button type="button" class="btn btn-outline-secondary"> Continuar </button>
                         </div>
                     </div>
                 </div>
