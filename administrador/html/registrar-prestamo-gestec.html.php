@@ -77,9 +77,9 @@
                     <div class="row">
                         <nav>
                             <ul class="pagination m-4">
-                                <li class="page-item "><a class="page-link" href="/administrador/html/datos-usuario-gestec.html">Regresar</a></li>
-                                <li class="page-item"><a class="page-link" href="/administrador/html/datos-usuario-gestec.html">1</a></li>
-                                <li class="page-item active"><a class="page-link" href="/administrador/html/registrar-prestamo-gestec.html">2</a></li>
+                                <li class="page-item "><a class="page-link" href="datos-usuario-gestec.php">Regresar</a></li>
+                                <li class="page-item"><a class="page-link" href="datos-usuario-gestec.html">1</a></li>
+                                <li class="page-item active"><a class="page-link" href="registrar-prestamo-gestec.html">2</a></li>
                                 <li class="page-item"><button type="submit" class="page-link">Finalizar</button></li>
                             </ul>
                         </nav>

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/administrador/CSS/tabla-de-equipos.css">
+    <link rel="stylesheet" href="tabla-de-equipos.css">
 
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -30,7 +30,7 @@
                         <div class="regresar col-lg-2 col-xs-11 col-ms-11 col-md-4 col-xl-2">
                         <nav>
                             <ul class="pagination1 mb-4">
-                                <li class="page-item" style="text-align: center;"><a class="page-link" href="/administrador/html/menu-gestec.html"> << Regresar</a></li>
+                                <li class="page-item" style="text-align: center;"><a class="page-link" href="menu-gestec.html">Regresar</a></li>
                             </ul>
                         </nav>
                         </div>
