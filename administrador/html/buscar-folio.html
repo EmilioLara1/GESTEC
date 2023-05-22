@@ -43,20 +43,22 @@
 
                         <div class="row">
                             <div class="col-auto h-auto">
-                                <h1>Buscar folio</h1>
-        
-                                <p class="lead">Buscar el folio del préstamo generado en la solicitud del préstamo</p>
-        
-                                <div class="row buscador">
-                                    <div class="col form-floating mb-3">
-                                        <input type="input" class="form-control" id="floatingInput" placeholder="0001">
-                                        <label for="floatingInput">Ingresar folio</label>
+                                <form action="buscar-folio.php" method="POST">
+                                    <h1>Buscar folio</h1>
+            
+                                    <p class="lead">Buscar el folio del préstamo generado en la solicitud del préstamo</p>
+            
+                                    <div class="row buscador">
+                                        <div class="col form-floating mb-3">
+                                            <input type="input" class="form-control" name="folio" id="floatingInput" placeholder="0001">
+                                            <label for="floatingInput">Ingresar folio</label>
+                                        </div>
+            
+                                        <div class="col-auto">
+                                            <button class="btn btn-primary" type="submit">Buscar</button>
+                                        </div>
                                     </div>
-        
-                                    <div class="col-auto">
-                                        <button class="btn btn-primary" type="submit">Buscar</button>
-                                    </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
