@@ -16,7 +16,7 @@
         
         // Verificar si se obtuvieron resultados
         if (mysqli_num_rows($resultado) > 0) {
-            header("Location:datos-usuario-gestec.html");
+            header("Location:datos-usuario-gestec.php?folio=$folio");
         } else {
             // Inicio de sesión fallido
             echo "Folio incorrecto o no encontrado.";

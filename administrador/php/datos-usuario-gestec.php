@@ -9,7 +9,7 @@
     
     // Consulta SQL para obtener registros de la tabla de alumnos
     // Consulta SQL para obtener los campos de la tabla "usuarios" basado en el campo "Código" de la tabla "prestamos"
-    $query = "SELECT u.Nombres, u.Ape_Pat, u.Ape_Mat, u.Carrera, u.Domicilio, u.Colonia, u.Celular, u.Correo, u.Codigo
+    $query = "SELECT u.Nombres, u.Ape_Pat, u.Ape_Mat, u.Carrera, u.Domicilio, u.Colonia, u.Celular, u.Codigo
               FROM prestamos AS p
               JOIN usuarios AS u ON p.Codigo = u.Codigo
               WHERE p.Folio = $folio";
@@ -91,17 +91,17 @@
                                             <p class="text-center border rounded p-1"><?php echo $fila['Carrera']; ?></p>
                                         
                                     </div>
-                    
-                                    <div class="row ">
-                                        
-                                            <label class="form-label fw-bold p-0 m-0">Domicilio (Calle y número, ej. Juarez 513)</label>
-                                        
-                                            <p class="text-center border rounded p-1"><?php echo $fila['Domicilio']; ?></p>
-                                       
-                                    </div>
                                 </div>
             
                                 <div class="col-auto contenido m-2">
+                                    <div class="row ">
+                                            
+                                            <label class="form-label fw-bold p-0 m-0">Domicilio (Calle y número, ej. Juarez 513)</label>
+                                        
+                                            <p class="text-center border rounded p-1"><?php echo $fila['Domicilio']; ?></p>
+                                    
+                                    </div>
+
                                     <div class="row ">
                                         
                                             <label class="form-label fw-bold p-0 m-0">Colonia</label>
@@ -125,25 +125,20 @@
                                             <p class="text-center border rounded p-1"><?php echo $fila['Codigo']; ?></p>
                                         
                                     </div>
-                    
-                                    <div class="row ">
-                                        
-                                            <label class="form-label fw-bold p-0 m-0">Correo electrónico institucional</label>
-                                        
-                                            <p class="text-center border rounded p-1"><?php echo $fila['Correo']; ?></p>
-                                        
-                                    </div>
-            
-                                    <div class="row ">
-                                            
-                                                <label class="form-label fw-bold p-0 m-0">Documentos</label>
-                                            
-                                                 <button type="button" class="btn btn-primary btn-sm text-center">Abrir PDF</button>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-auto">
+                                    <div class="row">
+                                                
+                                        <label class="form-label fw-bold p-0 m-0 text-center">Documentos</label>
+                                    
+                                        <button type="button" class="btn btn-primary btn-sm text-center">Abrir PDF</button>
                                             
                                     </div>
                                 </div>
                             </div>
-                            
                         </div>
                     </div>
     
