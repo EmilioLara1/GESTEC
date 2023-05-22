@@ -110,7 +110,7 @@
                         </div>
 
                         <div class="row">
-                            <button type="button" class="btn btn-outline-secondary">Cerrar sesión</button>
+                            <a href="cerrar-sesion.php"><button type="button" class="btn btn-outline-secondary" name="cerrar">Cerrar sesión</button></a>
                         </div>
                     </div>
                 </div>
