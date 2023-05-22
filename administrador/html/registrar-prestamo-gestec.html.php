@@ -78,12 +78,12 @@
                         <nav>
                             <ul class="pagination m-4">
                                 <li class="page-item "><a class="page-link" href="datos-usuario-gestec.php">Regresar</a></li>
-                                <li class="page-item"><a class="page-link" href="datos-usuario-gestec.html">1</a></li>
-                                <li class="page-item active"><a class="page-link" href="registrar-prestamo-gestec.html">2</a></li>
+                                <li class="page-item"><a class="page-link" href="datos-usuario-gestec.php">1</a></li>
+                                <li class="page-item active"><a class="page-link" href="registrar-prestamo-gestec.html.php">2</a></li>
                                 <li class="page-item"><button type="submit" class="page-link">Finalizar</button></li>
                             </ul>
                         </nav>
-                        <a class="cancel text-center" href="/administrador/html/menu-gestec.html">Cancelar</a>
+                        <a class="cancel text-center" href="menu-gestec.html">Cancelar</a>
                     </div>
                 </form>
             </div>

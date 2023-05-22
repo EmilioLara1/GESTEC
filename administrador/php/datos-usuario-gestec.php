@@ -146,8 +146,8 @@
                         <nav>
                             <ul class="pagination m-4">
                               <li class="page-item"><a class="page-link" href="buscar-folio.html">Regresar</a></li>
-                              <li class="page-item active"><a class="page-link" href="datos-usuario-gestec.html">1</a></li>
-                              <li class="page-item"><a class="page-link" href="registrar-prestamo-gestec.html">2</a></li>
+                              <li class="page-item active"><a class="page-link" href="datos-usuario-gestec.php">1</a></li>
+                              <li class="page-item"><a class="page-link" href="registrar-prestamo-gestec.html.php">2</a></li>
                               <li class="page-item"><a class="page-link" href="registrar-prestamo-gestec.html.php">Siguiente</a></li>
                             </ul>
                         </nav>
@@ -178,4 +178,3 @@
         // Cerrar la conexión a la base de datos
         mysqli_close($conn);
     ?>
-
