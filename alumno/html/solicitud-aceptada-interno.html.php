@@ -86,6 +86,7 @@
                                     
                                             if ($resultadoInsercion) {
                                                 echo $folio;
+                                                $_SESSION['folio'] = $folio;
                                             } else {
                                                 echo "Error al insertar el código en la tabla prestamos";
                                             }
