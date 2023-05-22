@@ -42,6 +42,9 @@ h1{
 }
 
 .cerrar, .cerrar a{
-    text-align: end;
     text-decoration: none;
+}
+
+.bi{
+    color: #0d6efd;
 }
