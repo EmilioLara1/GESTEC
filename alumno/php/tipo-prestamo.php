@@ -24,7 +24,7 @@
         $resultado = mysqli_query($conn, $query);
 
         if (mysqli_num_rows($resultado) > 0) {
-            header("Location: solicitud-aceptada-externo.html");
+            header("Location: subir-documentos.html");
             exit();
         } else {
             header("Location: convocatoria-cerrada.html");
