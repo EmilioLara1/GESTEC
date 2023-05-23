@@ -112,31 +112,31 @@ background-color: white;
 padding: 3px;
 }
 
-.banner .texto1{
+.banner1 .texto1{
     margin-top: 5%;
     margin-left: 10%;
 }
 
-.banner .texto1 .h5{
+.banner1 .texto1 .h5{
     margin: 2%;
     color: gray;
     font-weight: bold;
     font-size: 25px;
 }
-.banner .texto1 .h4{
+.banner1 .texto1 .h4{
     margin: 2%;
     color:black;
     font-size: 18px;
 }
 
-.banner .texto1 .h3{
+.banner1 .texto1 .h3{
     margin: 2%;
     color:black;
     font-size: 20px;
     font-weight: bold;
 }
 
-.banner .texto1 .h2{
+.banner1 .texto1 .h2{
     margin: 2%;
     color:gray;
     font-size: 65px;
