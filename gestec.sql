@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-05-2023 a las 23:19:32
+-- Tiempo de generación: 23-05-2023 a las 04:16:53
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -66,8 +66,7 @@ INSERT INTO `cuentas` (`Codigo`, `Correo`, `Contraseña`) VALUES
 
 CREATE TABLE `documentos` (
   `Codigo` varchar(9) NOT NULL,
-  `Nombre` varchar(500) NOT NULL,
-  `URL` varchar(500) NOT NULL
+  `Nombre` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -81,7 +80,8 @@ CREATE TABLE `equipos` (
   `Resguardo` int(9) NOT NULL,
   `No_Serie` varchar(35) NOT NULL,
   `Tipo` varchar(20) NOT NULL,
-  `Modelo` varchar(25) NOT NULL
+  `Modelo` varchar(25) NOT NULL,
+  `Marca` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -101,7 +101,7 @@ CREATE TABLE `estatus_prestamos` (
 
 INSERT INTO `estatus_prestamos` (`Tipo_Prestamo`, `Estatus`) VALUES
 ('INTERNO', 'habilitado'),
-('EXTERNO', 'deshabilitado');
+('EXTERNO', 'habilitado');
 
 -- --------------------------------------------------------
 
@@ -118,6 +118,13 @@ CREATE TABLE `prestamos` (
   `Tipo` varchar(7) NOT NULL,
   `Estatus` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `prestamos`
+--
+
+INSERT INTO `prestamos` (`Folio`, `ID`, `Codigo`, `Fecha_Prestamo`, `Fecha_Devolucion`, `Tipo`, `Estatus`) VALUES
+(23194, 0, '214603948', '2023-05-23 02:09:19', '2023-05-23 02:09:19', 'INTERNO', '');
 
 -- --------------------------------------------------------
 
@@ -141,7 +148,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`Codigo`, `Nombres`, `Ape_Pat`, `Ape_Mat`, `Carrera`, `Domicilio`, `Colonia`, `Celular`) VALUES
-('214603948', 'Fatima', 'Montañez', 'Orozco', 'Tecnologias', 'Santo Tomas 613', 'Mision San', '3315740445');
+('214603948', 'Fatima', 'Montanez', 'Orozco', 'Tecnologías de la Información', 'Santo Tomas', 'Mision San', '3315740445');
 
 --
 -- Índices para tablas volcadas
@@ -196,12 +203,6 @@ ALTER TABLE `equipos`
   MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `prestamos`
---
-ALTER TABLE `prestamos`
-  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT;
-
---
 -- Restricciones para tablas volcadas
 --
 
@@ -216,13 +217,6 @@ ALTER TABLE `cuentas`
 --
 ALTER TABLE `documentos`
   ADD CONSTRAINT `documentos_ibfk_1` FOREIGN KEY (`Codigo`) REFERENCES `usuarios` (`Codigo`) ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `prestamos`
---
-ALTER TABLE `prestamos`
-  ADD CONSTRAINT `prestamos_ibfk_2` FOREIGN KEY (`Codigo`) REFERENCES `usuarios` (`Codigo`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `prestamos_ibfk_3` FOREIGN KEY (`ID`) REFERENCES `equipos` (`ID`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
