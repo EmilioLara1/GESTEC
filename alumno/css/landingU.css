@@ -28,7 +28,7 @@ body{
 .banner{
     height: 165vh;
     width: 100%;
-    background:linear-gradient(95deg, rgba(2, 8, 85, 0.8), rgba(21, 101, 216, 0.8)), url('/imgs/cta.jpg');
+    background:linear-gradient(95deg, rgba(2, 8, 85, 0.8), rgba(21, 101, 216, 0.8)), url('cta.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
