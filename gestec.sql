@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-05-2023 a las 04:16:53
+-- Tiempo de generación: 23-05-2023 a las 07:43:19
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -69,6 +69,13 @@ CREATE TABLE `documentos` (
   `Nombre` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `documentos`
+--
+
+INSERT INTO `documentos` (`Codigo`, `Nombre`) VALUES
+('214603948', 'Kardex.pdf');
+
 -- --------------------------------------------------------
 
 --
@@ -124,7 +131,8 @@ CREATE TABLE `prestamos` (
 --
 
 INSERT INTO `prestamos` (`Folio`, `ID`, `Codigo`, `Fecha_Prestamo`, `Fecha_Devolucion`, `Tipo`, `Estatus`) VALUES
-(23194, 0, '214603948', '2023-05-23 02:09:19', '2023-05-23 02:09:19', 'INTERNO', '');
+(34446, 0, '214603948', '2023-05-23 05:42:19', '2023-05-23 05:42:19', 'EXTERNO', ''),
+(38421, 0, '214603948', '2023-05-23 05:41:40', '2023-05-23 05:41:40', 'INTERNO', '');
 
 -- --------------------------------------------------------
 
@@ -148,7 +156,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`Codigo`, `Nombres`, `Ape_Pat`, `Ape_Mat`, `Carrera`, `Domicilio`, `Colonia`, `Celular`) VALUES
-('214603948', 'Fatima', 'Montanez', 'Orozco', 'Tecnologías de la Información', 'Santo Tomas', 'Mision San', '3315740445');
+('214603948', 'Fatima', 'Montanez', 'Orozco', 'Tecnologías de la Información', 'Santo Tomas 613', 'Mision San Francisco', '3315634564');
 
 --
 -- Índices para tablas volcadas
