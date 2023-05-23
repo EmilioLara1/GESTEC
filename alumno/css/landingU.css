@@ -26,9 +26,9 @@ body{
 }
 
 .banner{
-    height: 100vh;
+    height: 165vh;
     width: 100%;
-    background:linear-gradient(95deg, rgba(2, 8, 85, 0.8), rgba(21, 101, 216, 0.8)), url('cta.jpg');
+    background:linear-gradient(95deg, rgba(2, 8, 85, 0.8), rgba(21, 101, 216, 0.8)), url('/imgs/cta.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -95,4 +95,40 @@ body{
 
 .navbar-brand{
     margin-left: 3vh;
+}
+
+.texto1{
+background-color: white;
+padding: 3px;
+}
+
+.banner .texto1{
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.banner .texto1 .h5{
+    margin: 2%;
+    color: gray;
+    font-weight: bold;
+    font-size: 25px;
+}
+.banner .texto1 .h4{
+    margin: 2%;
+    color:black;
+    font-size: 18px;
+}
+
+.banner .texto1 .h3{
+    margin: 2%;
+    color:black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.banner .texto1 .h2{
+    margin: 2%;
+    color:gray;
+    font-size: 65px;
+    font-weight: bold;
 }
