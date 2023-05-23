@@ -47,6 +47,27 @@
 
         if ($fechaDevolucionComparar < $fechaActualComparar) {
             $estatus = "RETRASADO";
+        } else {
+            $estatus = "ACTIVO";
+        }
+    
+        // Actualizar el estado del préstamo en la base de datos
+        $queryEstatus = "UPDATE prestamos SET Estatus = '$estatus' WHERE Folio = '$folio'";
+        $resultadoEstatus = mysqli_query($conn, $queryEstatus);
+    
+        if ($resultadoEstatus) {
+            if ($estatus == "RETRASADO") {
+                header("Location: prestamo-denegado.html");
+            } else {
+                header("Location: prestamo-registrado.html");
+            }
+        } else {
+            // Si la consulta no se ejecutó correctamente, redirigimos al usuario al segundo paso del formulario con un mensaje de error
+            echo "Ha ocurrido un error al registrar el estatus en la base de datos";
+        }
+
+        /* if ($fechaDevolucionComparar < $fechaActualComparar) {
+            $estatus = "RETRASADO";
             
             // Actualizar el estado del préstamo en la base de datos
             $queryEstatus = "UPDATE prestamos SET Estatus = '$estatus' WHERE Folio = '$folio'";
@@ -61,7 +82,7 @@
             $resultadoEstatus = mysqli_query($conn, $queryEstatus);
 
             header("Location: prestamo-registrado.html");
-        }
+        } */
 
         // Liberar memoria y cerrar la conexión
         mysqli_free_result($resultado);
