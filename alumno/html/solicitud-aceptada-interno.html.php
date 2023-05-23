@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/alumno/css/solicitud-aceptada-interno.css">
+    <link rel="stylesheet" href="solicitud-aceptada-interno.css">
 
     <title>¡Solicitud aceptada!</title>
     <link rel="shortcut icon" href="/imgs/icono.png">
