@@ -38,7 +38,7 @@
 
 
                     <div class="row">
-                        <h1 class="text-center">Administrar Equipos</h1>
+                        <h1 class="text-center">Administrar equipos</h1>
                     </div>
     
                     <div class="row" >
@@ -126,7 +126,7 @@
             }
         } else {
             // No se encontraron resultados
-            echo "No se encontro ningun equipo";
+            echo "No se encontró ningún equipo";
         }
         
         // Cerrar la conexión a la base de datos
@@ -258,7 +258,13 @@
                             </div>
                             <div class="mb-2">
                               <label for="recipient-name" class="col-form-label">Tipo:</label>
-                              <input type="text" class="form-control" id="Tipo" name="Tipo">
+                              <select class="form-select" name="Tipo" id="Tipo">
+                                  <option selected>Selecciona una opción</option>
+                                  <option value="Laptop">Laptop</option>
+                                  <option value="Tablet">Tablet</option>
+                                  <option value="Cable VGA">Cable VGA</option>
+                                  <option value="Cable Ethernet">Cable Ethernet</option>
+                              </select>
                             </div>
                             <div class="mb-2">
                               <label for="recipient-name" class="col-form-label">Modelo:</label>
