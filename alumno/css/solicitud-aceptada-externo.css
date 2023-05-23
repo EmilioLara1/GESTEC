@@ -53,3 +53,9 @@ h1{
     font-size: 32px;
     color: #3C95FF;
 }
+
+.cerrar, .cerrar a{
+    height: 0;
+    text-align: end;
+    text-decoration: none;
+}
