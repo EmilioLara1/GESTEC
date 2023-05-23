@@ -131,11 +131,12 @@
                             <div class="row">
                                 <div class="col-auto">
                                     <div class="row">
-                                                
                                         <label class="form-label fw-bold p-0 m-0 text-center">Documentos</label>
-                                    
-                                        <button type="button" class="btn btn-primary btn-sm text-center">Abrir PDF</button>
+                                        <div class="col-auto">
+                                            <a href="mostrar-pdf.php"><button type="submit" name="pdf" class="btn btn-primary btn-sm text-center">Abrir PDF</button></a>
+
                                             
+                                        </div>                                   
                                     </div>
                                 </div>
                             </div>
