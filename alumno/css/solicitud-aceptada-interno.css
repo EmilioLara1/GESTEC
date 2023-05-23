@@ -9,7 +9,6 @@
 
 h1{
     font-weight: 700;
-    margin: 34px;
     font-size: 40px;
 }
 
@@ -42,10 +41,7 @@ h1{
     margin: 0;
 }
 
-.col.h-auto .row{
-    height: auto;
-    margin: 34px;
-}
+
 
 .bi{
     font-size: 40px;
