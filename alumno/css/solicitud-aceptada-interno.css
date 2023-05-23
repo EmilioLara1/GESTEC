@@ -28,9 +28,13 @@ h1{
 }
 
 .btn{
+    display: inline-flex;
     width: 295px;
     height: 63px;
     font-weight: 600;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .row, .col{
