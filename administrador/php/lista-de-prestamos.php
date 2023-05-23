@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabla de préstamos</title>
-    <link rel="shortcut icon" href="/imgs/icono.png">
+    <link rel="shortcut icon" href="icono.png">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -30,7 +30,7 @@
                         <div class="regresar col-lg-2 col-xs-11 col-ms-11 col-md-4 col-xl-2">
                         <nav>
                             <ul class="pagination1 mb-4">
-                                <li class="page-item" style="text-align: center;"><a class="page-link" href="/administrador/html/menu-gestec.html"> << Regresar</a></li>
+                                <li class="page-item" style="text-align: center;"><a class="page-link" href="/administrador/html/menu-gestec.html">Regresar</a></li>
                             </ul>
                         </nav>
                         </div>

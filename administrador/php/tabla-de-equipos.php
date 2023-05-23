@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabla de equipos</title>
-    <link rel="shortcut icon" href="/imgs/icono.png">
+    <link rel="shortcut icon" href="icono.png">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -38,7 +38,7 @@
 
 
                     <div class="row">
-                        <h1 class="text-center"> Administrar Equipos </h1>
+                        <h1 class="text-center">Administrar Equipos</h1>
                     </div>
     
                     <div class="row" >
@@ -65,11 +65,11 @@
                                 <!-- <th class="th1">Seleccionar</th> -->
                                 <th class="th2">ID</th>
                                 <th class="th1">Resguardo</th>
-                                <th> Número de serie</th>
+                                <th>Número de serie</th>
                                 <th class="th1">Tipo</th>
-                                <th> Modelo </th>
-                                <th> Marca </th>
-                                <th> Acciones </th>
+                                <th>Modelo</th>
+                                <th>Marca</th>
+                                <th>Acciones</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -166,7 +166,7 @@
                               </div>
                               <div class="modal-footer">
                                   
-                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">  Cancelar </button>
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                                       
                                       <button type="button" class="btn btn-danger" onclick="eliminarRegistro(event)">Eliminar</button>
 
@@ -243,7 +243,7 @@
                     <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="exampleModalToggleLabel"> Nuevo registro </h1>
+                          <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Nuevo registro</h1>
                           <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                         </div>
                         <div class="modal-body f">
@@ -273,7 +273,7 @@
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
 
-                                <button type="button" name="enviar" class="btn btn-primary" onclick="mostrarModal()"> Confirmar </button>
+                                <button type="button" name="enviar" class="btn btn-primary" onclick="mostrarModal()">Confirmar</button>
 
                              <!-- <input type="submit" name="enviar" value="AGREGAR"> -->
                             </div>
